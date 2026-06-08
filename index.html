@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- ffhfh -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GENIUS - Demo Grilla</title>
+
+        <!-- Bootstrap desde CDN (no necesitas archivos locales) -->
+        <link rel="stylesheet" href="./CSS/bootstrapcss/bootstrap.min.css">
+        <link rel="stylesheet" href="./CSS/bootstrapcss/genius.css">
+    </head>
+    <body>
+
+        <!-- NAVBAR Y MENU DE NAVEGACIÓN -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary"> <!-- convierte el nav en contenedor flexbox,  permite ajustar el tamaño segun el componente, adapta el color de fondo segun el -->
+            <div class="container-fluid"> <!-- hace que el nav ocupe todo el ancho disponible -->
+                <a class="navbar-brand" href="#">PG</a> <!-- Estiliza el logo y lo posiciona -->
+                <button class="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation"> <!-- genera el boton -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- permite colapsar el menú en dispositivos móviles -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- Estiliza la lista de navegación, me-auto para alinear a la izquierda, mb-2 y mb-lg-0 para ajustar el margen inferior -->
+                        <li class="nav item"> <!-- Estiliza cada elemento de la lista como un item de navegación -->
+                            <a class="nav-link active" aria-current="page" href="#hero-bg">Inicio</a> <!-- Estiliza el enlace, active para indicar que es la página actual -->
+                        </li>
+                        <li class="nav item">
+                            <a class="nav-link" href="#"><Link:rss></Link:rss></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                navegación
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#tarjetas">tarjetas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#categorias">categorias</a></li>
+                            <li><a class="dropdown-item" href="#poderes">poderes</a></li>
+                        </ul>
+                        <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                </div> 
+            </div>
+        </nav>
+
+        <!-- PORTADA DE INICIO PARA PRESENTAR EL PROYECTO -->
+
+            <main class="container py-4" id="hero-bg"> <!-- Estiliza el contenedor principal, py-4 para agregar padding vertical, bg-body-tertiary para el color de fondo -->
+            <div class="p-4 p-md-5 mb-3 rounded text-body-emphasis hero-bg">
+                <div class="col-lg-6 px-0">
+                <h1 class="display-4 fst-italic">
+                    POWERGENIUS: La Arquitectura del Genio
+                </h1>
+                <p class="lead my-3">
+                    El genio es la constante; el contexto es la variable. 
+                    PowerGenius es un sistema de análisis táctico que despoja 
+                    a los grandes hitos de la humanidad de sus barreras históricas 
+                    para exponer su verdadera capacidad. Aquí, el potencial no se mide 
+                    por recursos, sino por el impacto puro de la mente.
+                </p>
+                <p class="lead mb-0">
+                    <a href="#" class="text-body-emphasis fw-bold"
+                    >Continue reading...</a
+                    >
+                </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- SECCIÓN DE TARJETAS PARA MOSTRAR LOS PROYECTOS, ARTÍCULOS O CONTENIDO DESTACADO -->  
+        <section id="tarjetas">
+            <div class="album py-5 fondo_cards">  <!-- Estiliza la sección como un álbum, py-5 para agregar padding vertical, bg-body-tertiary para el color de fondo -->
+                <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                    <!-- TARJETA 1 -->
+                    <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/Einstain.jpg" 
+                                alt="Albert Einstein"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Einstein seleccionado')">
+                                <span class="badge-nombre">ALBERT EINSTAIN</span>
+                                <span class="badge-puntaje">94%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                Curvaré el espacio-tiempo a tu alrededor y 
+                                manipularé la luz a mi antojo; en mi universo, 
+                                tu realidad no es más que una coordenada relativa.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <!-- TARJETA 2 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/Turing.jpg"
+                                alt="Alan Turing"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Turing seleccionado')">
+                                <span class="badge-nombre">ALAN TURING</span>
+                                <span class="badge-puntaje">93%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                He decodificado el lenguaje de las máquinas 
+                                y el tuyo propio; tu lógica es solo un algoritmo 
+                                básico que ya he resuelto y superado.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 3 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/Newton.jpg"
+                                alt="Isaac Newton"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Newton seleccionado')">
+                                <span class="badge-nombre">ISAAC NEWTON</span>
+                                <span class="badge-puntaje">90%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                He definido las leyes que gobiernan tu mundo;
+                                si te mueves contra mi física, te aplastaré bajo
+                                el peso de mi propia gravedad.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 4 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/musk.jpg"
+                                alt="Elon Musk"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Musk seleccionado')">
+                                <span class="badge-nombre">ELON MUSK</span>
+                                <span class="badge-puntaje">89%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                Rediseñaré la industria, colonizaré el espacio
+                                y haré que tu realidad parezca obsoleta mientras 
+                                intento salvar una raza en peligro.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 5 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/jobs.jpg"
+                                alt="Steve Jobs"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Jobs seleccionado')">
+                                <span class="badge-nombre">STEVE JOBS</span>
+                                <span class="badge-puntaje">88%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                He diseñado el futuro que aún no te atreves a imaginar;
+                                te venderé la realidad que tú mismo consumirás sin 
+                                cuestionar mi genialidad.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 6 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/hassabis.jpg"
+                                alt="Demis Hassabis"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Hassabis seleccionado')">
+                                <span class="badge-nombre">DEMIS HASSABIS</span>
+                                <span class="badge-puntaje">88%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                Mi IA ha resuelto lo imposible; he mapeado 
+                                el pliegue de la vida misma y tu mente es 
+                                solo un dato más en mi red.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 7 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/tesla.jpg"
+                                alt="Nikola Tesla"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Tesla seleccionado')">
+                                <span class="badge-nombre">NIKOLA TESLA</span>
+                                <span class="badge-puntaje">87%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                Soy la corriente que alimenta el futuro;
+                                si intentas competir, te desconectaré del sistema
+                                y te dejaré sumido en la más absoluta oscuridad.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 8 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/darwin.jpg"
+                                alt="Charles Darwin"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Darwin seleccionado')">
+                                <span class="badge-nombre">CHARLES DARWIN</span>
+                                <span class="badge-puntaje">86%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                "Tu especie es obsoleta. Ejecuto mi selección natural 
+                                y te borro de la existencia, dejando solo a los más aptos. 
+                                ¡Evoluciona o desaparece!"
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- TARJETA 9 -->
+                <div class="col">
+                    <div class="card shadow-sm tarjeta_1">
+                        <div class="card-img-wrapper" style="position: relative;">
+                            <img 
+                                src="img/curie.jpg"
+                                alt="Marie Curie"
+                                class="card-img-top"
+                                style="height: 225px; object-fit: cover; display: block;"
+                            >
+                            <button class="card-badge" onclick="alert('Curie seleccionada')">
+                                <span class="badge-nombre">MARIE CURIE</span>
+                                <span class="badge-puntaje">84%</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text mt-auto">
+                                "Mi radiación es letal. Expondré tu estructura molecular 
+                                a mi intensidad hasta que tu esencia se degrade en el polvo 
+                                de la historia."
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- SECCION 3 CATEGORIAS  -->
+        <!-- TARJETA 1 -->
+        
+        <section id="categorias">
+            <div class="container px-4 py-5">
+                <h2 class="pb-2 border-bottom">CATEGORIAS</h2>
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg tarjeta-vision">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                                    VISIÓN DISRUPTIVA
+                                </h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img src="img/curie.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"/>
+                                    </li>
+                                    <li class="d-flex align-items-center me-3"><small>Earth</small></li>
+                                    <li class="d-flex align-items-center"><small>3d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- tarjeta 2 -->
+                    
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg tarjeta-vision2">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                                    CAPACIDAD DE EJECUCIÓN
+                                </h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img src="img/curie.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"/>
+                                    </li>
+                                    <li class="d-flex align-items-center me-3"><small>Earth</small></li>
+                                    <li class="d-flex align-items-center"><small>3d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- tarjeta 3 -->
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg tarjeta-vision3">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                                    LEGADO INDELEBLE
+                                </h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img src="img/curie.jpg" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white"/>
+                                    </li>
+                                    <li class="d-flex align-items-center me-3"><small>Earth</small></li>
+                                    <li class="d-flex align-items-center"><small>3d</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="container py-5" id="poderes">
+            <h2 class="pb-2 border-bottom">PODERES</h2>
+            
+            <div id="carruselPoderes" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselPoderes" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carruselPoderes" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carruselPoderes" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- slides -->
+                <div class="carousel-inner rounded-4">
+
+                    <!-- slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center g-0">
+                            
+                            <!-- barras izquierda -->
+                            <div class="col-3 p-4 bg-dark text-white rounded-start-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 80%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 70%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- foto centro -->
+                            <div class="col-6">
+                                <img src="img/Einstain_vs_musk.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Einstein">
+                            </div>
+
+                            <!-- barras derecha -->
+                            <div class="col-3 p-4 bg-dark text-white rounded-end-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 80%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 70%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center g-0">
+                            
+                            <div class="col-3 p-4 bg-dark text-white rounded-start-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 60%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 95%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 70%"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <img src="img/turing_vs_darwin.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Newton">
+                            </div>
+
+                            <div class="col-3 p-4 bg-dark text-white rounded-end-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 60%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 75%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 95%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 70%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center g-0">
+                            
+                            <div class="col-3 p-4 bg-dark text-white rounded-start-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 95%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 65%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 80%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <img src="img/steve_vs_curie.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Curie">
+                            </div>
+
+                            <div class="col-3 p-4 bg-dark text-white rounded-end-4">
+                                <p class="mb-1 small">Visión</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 95%"></div>
+                                </div>
+                                <p class="mb-1 small">Innovación</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 65%"></div>
+                                </div>
+                                <p class="mb-1 small">Rigurosidad</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 80%"></div>
+                                </div>
+                                <p class="mb-1 small">Influencia</p>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- controles anterior / siguiente -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselPoderes" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselPoderes" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </section>
+
+        <script src="js/bootstrapjs/bootstrap.bundle.js"></script>
+        <footer class="footer-pg">
+            <div class="container">
+                <ul class="footer-links">
+                    <li><a href="#hero-bg">Inicio</a></li>
+                    <li><a href="#tarjetas">Tarjetas</a></li>
+                    <li><a href="#carruselPoderes">Poderes</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                </ul>
+                <p class="footer-copy">© 2026 POWERGENIUS · La Arquitectura del Genio</p>
+            </div>
+        </footer>
+    </body>
+</html>
