@@ -1,0 +1,37 @@
+
+
+.mastermind{
+    background-color: #f00505;
+    color: white;
+}
+
+
+.mastermindblue80 {
+    background-color: rgba(0, 0, 255, 0.8);
+    color: white;
+}
+
+.mastermindblue60 {
+    background-color: rgba(0, 0, 255, 0.6);
+    color: white;
+}
+
+.mastermindblue40 {
+    background-color: rgba(0, 0, 255, 0.4);
+    color: white;
+}
+
+.mastermindblue20 {
+    background-color: rgba(0, 0, 255, 0.2);
+    color: white;
+}
+
+.col {
+    background-color: #060606;
+    border: 1px solid #395e15;
+    padding: 20px;
+    text-align: center;
+}
+.row {
+    margin-bottom: 10px;
+}

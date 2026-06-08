@@ -1,0 +1,402 @@
+.navbar {
+    background-color: #f8fafa;
+    border-bottom: 3px solid #0ec6f4;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0063ddb1;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.hero-bg {
+    position: relative;
+    background-image: url('../../img/newton_vs_tesla_2728x1536.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.75) 0%,    /* oscuro a la izquierda (texto) */
+        rgba(0, 0, 0, 0.45) 60%,    /* transición */
+        rgba(0, 0, 0, 0) 100%      /* transparente a la derecha */
+    );
+    border-radius: 0.375rem;
+    z-index: 0;
+}
+
+.hero-bg > * {
+    position: relative;
+    z-index: 1; /* el texto queda por encima del difuminado */
+}
+
+.hero-bg h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(0, 149, 255),
+                0 0 20px rgba(0, 174, 255, 0.5);
+}
+
+.hero-bg p {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgb(0, 149, 255),
+                0 0 20px rgba(0, 174, 255, 0.5);
+}
+
+.fondo_cards {
+    background-color:rgba(0, 181, 247, 0.963);
+}
+
+/* Wrapper para poder posicionar el badge sobre la imagen */
+.card-img-wrapper {
+    position: relative;
+}
+
+/* El rectángulo badge-botón */
+.card-badge {
+    position: absolute;
+    bottom: -18px;          /* la mitad queda sobre la imagen, mitad sobre el body */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #334a5a;
+    border: 1px solid #01d0fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    z-index: 10;
+}
+
+.card-badge:hover {
+    background-color: #00c3ff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Nombre a la derecha */
+.badge-nombre {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #fdfeff;
+}
+
+/* Puntaje a la izquierda */
+.badge-puntaje {
+    font-size: 1.25rem;
+    color: #e2ff03;
+}
+
+/* Empuja el texto hacia abajo para dejar espacio al badge */
+.tarjeta_1 .card-body {
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.tarjeta-vision {
+    position: relative;
+    background-image: url('../../img/visiondisruptiva.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+@media (min-width: 992px) {
+    .tarjeta-vision {
+        background-image: url('../../img/visiondisruptiva2.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 506px;
+    }
+} 
+.tarjeta-vision::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: inherit;
+}
+.tarjeta-vision > * {
+    position: relative;
+    z-index: 1; /* el texto queda por encima del difuminado */
+}
+.tarjeta-vision h3 {
+    color: #ffffff;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 149, 255, 0.8);
+    font-weight: 900;
+}
+.tarjeta-vision li {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgb(0, 149, 255),
+                0 0 20px rgba(0, 174, 255, 0.5);
+}
+.tarjeta-vision .card-body {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.tarjeta-vision {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-vision:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(2, 51, 86, 0.7);
+}
+.tarjeta-vision::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-radius: inherit;
+    transition: background-color 0.3s ease;
+}
+.tarjeta-vision:hover::after {
+    background-color: rgba(14, 57, 100, 0.355);
+}
+
+
+
+
+.tarjeta-vision2 {
+    position: relative;
+    background-image: url('../../img/CAPA.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+@media (min-width: 992px) {
+    .tarjeta-vision2 {
+        background-image: url('../../img/CAPA2.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 506px;
+    }
+} 
+.tarjeta-vision2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: inherit;
+}
+.tarjeta-vision2 > * {
+    position: relative;
+    z-index: 1; /* el texto queda por encima del difuminado */
+}
+.tarjeta-vision2 h3 {
+    color: #ffffff;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 149, 255, 0.8);
+    font-weight: 900;
+}
+.tarjeta-vision2 li {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgb(0, 149, 255),
+                0 0 20px rgba(0, 174, 255, 0.5);
+}
+.tarjeta-vision2 .card-body {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.tarjeta-vision2 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-vision2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(2, 51, 86, 0.7);
+}
+.tarjeta-vision2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-radius: inherit;
+    transition: background-color 0.3s ease;
+}
+.tarjeta-vision2:hover::after {
+    background-color: rgba(14, 57, 100, 0.355);
+}
+
+
+
+
+.tarjeta-vision3 {
+    position: relative;
+    background-image: url('../../img/legado.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+@media (min-width: 992px) {
+    .tarjeta-vision3 {
+        background-image: url('../../img/legado2.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 506px;
+    }
+} 
+.tarjeta-vision3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: inherit;
+}
+.tarjeta-vision3 > * {
+    position: relative;
+    z-index: 1; /* el texto queda por encima del difuminado */
+}
+.tarjeta-vision3 h3 {
+    color: #ffffff;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 149, 255, 0.8);
+    font-weight: 900;
+}
+.tarjeta-vision3 li {
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgb(0, 149, 255),
+                0 0 20px rgba(0, 174, 255, 0.5);
+}
+.tarjeta-vision3 .card-body {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.tarjeta-vision3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-vision3:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(2, 51, 86, 0.7);
+}
+.tarjeta-vision3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-radius: inherit;
+    transition: background-color 0.3s ease;
+}
+.tarjeta-vision3:hover::after {
+    background-color: rgba(14, 57, 100, 0.355);
+}
+
+
+#carruselPoderes img {
+    border: 3px solid #0ec6f4;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.5);
+}
+#carruselPoderes img {
+    border: 3px solid #0ec6f4;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.5);
+    border-radius: 8px;
+}
+
+
+#poderes{
+    background-color: #0ec6f4;
+    border-radius: 0.375rem;
+}
+
+.footer-pg {
+    border-top: 2px solid #0ec6f4;
+    background-color: #f8f9fa;
+    padding: 30px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0ec6f4;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
